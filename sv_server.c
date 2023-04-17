@@ -7,8 +7,6 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 
-// server nhap tu ban phim.
-
 int main(int argc, char *argv[])
 {   
     char port[4];
@@ -44,7 +42,9 @@ int main(int argc, char *argv[])
     int client = accept(listener, (struct sockaddr *)&clientAddr, &clientAddrLen);
     printf("Client IP: %s:%d\n", inet_ntoa(clientAddr.sin_addr), ntohs(clientAddr.sin_port));
     
-    // addr_client.
+    
+    
+    
     char clientIP[258];
     strcpy(clientIP, inet_ntoa(clientAddr.sin_addr));
     
